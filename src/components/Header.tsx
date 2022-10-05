@@ -117,9 +117,22 @@ export const Header = () => {
             sx={{ flex: 1, justifyContent: "flex-end" }}
           >
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Button variant="contained" component={Link} to={"/register"}>
-                Register Now
-              </Button>
+              <div
+                className="htb-button"
+                style={{
+                  width: "100%",
+                }}
+              >
+                <Button
+                  sx={{ mb: 10 }}
+                  component={Link}
+                  className="btn special"
+                  to={"/register"}
+                  fullWidth
+                >
+                  Register Now
+                </Button>
+              </div>
             </Box>
           </Stack>
           <>
