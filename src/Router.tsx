@@ -3,6 +3,7 @@ import App from "./App";
 import MainLayout from "./layouts/MainLayout";
 import RegisterPage from "./pages/register";
 import HomePage from "./pages";
+import { DetailsPage } from "./pages/details";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,15 @@ export const router = createBrowserRouter([
     element: (
       <MainLayout>
         <RegisterPage />
+      </MainLayout>
+    ),
+  },
+
+  {
+    path: "/profile/:id",
+    element: (
+      <MainLayout>
+        <DetailsPage />
       </MainLayout>
     ),
   },
