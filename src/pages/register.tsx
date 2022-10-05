@@ -14,6 +14,7 @@ import {
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
+import { AppConfig } from "../config";
 
 enum UserInformation {
   id = "id",
@@ -98,8 +99,8 @@ const RegisterPage = () => {
       members,
     };
 
-    console.log(JSON.stringify(values));
-    createRegistration.mutate(values);
+    const data = createRegistration.mutate(values);
+    console.log(data);
     setShowSnakBar(true);
     setMessage("Registration success");
   };

@@ -1,4 +1,4 @@
 //@ts-ignore
-const AppConfig = {
+export const AppConfig = {
   api_url: "http://localhost:4000",
 };
