@@ -43,6 +43,23 @@ export const DetailsPage = () => {
             Download Guidlines
           </Button>
         </div>
+
+        <div className="large_divider" style={{ marginTop: 20 }} />
+
+        <Box sx={{ alignItems: "center" }} className="redbackground">
+          <Box
+            component="img"
+            className="qrcode"
+            alt="test"
+            src="https://api.hacktonight.fossnsbm.org/633dba6944c9e7888d27d109.png"
+            sx={{
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+              width: "30%",
+            }}
+          />
+        </Box>
       </Container>
     </>
   );

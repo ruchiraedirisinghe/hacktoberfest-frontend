@@ -19,7 +19,6 @@
   top: -10%;
   -webkit-filter: brightness(0.4) sepia(1) hue-rotate(220deg) saturate(8);
   filter: brightness(0.4) sepia(1) hue-rotate(220deg) saturate(8);
-
   background-image: url("https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg");
   opacity: 0.2;
 
@@ -86,7 +85,6 @@
   top: -10%;
   -webkit-filter: brightness(0.3) sepia(1) hue-rotate(180deg) saturate(6);
   filter: brightness(0.3) sepia(1) hue-rotate(180deg) saturate(6);
-
   opacity: 0.2;
   -webkit-mask-image: radial-gradient(
     ellipse 70% 80% at 50% 50%,
