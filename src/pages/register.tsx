@@ -1,10 +1,15 @@
 import {
   TextField,
+  Snackbar,
+  Box,
+  ListItem,
+  ListItemButton,
   Button,
   Container,
   Paper,
   Typography,
   Divider,
+  ListItemText,
 } from "@mui/material";
 import { useState } from "react";
 
@@ -21,6 +26,8 @@ enum UserInformation {
 
 const RegisterPage = () => {
   const [teamName, setTeamName] = useState("");
+  const [showSnackBar, setShowSnakBar] = useState(false);
+  const [message, setMessage] = useState("");
   const [members, setMembers] = useState([
     {
       id: 0,
@@ -86,11 +93,32 @@ const RegisterPage = () => {
     };
 
     console.log(JSON.stringify(values));
+    setShowSnakBar(true);
+    setMessage("Registration success");
   };
 
   return (
     <>
+      <Snackbar
+        open={showSnackBar}
+        autoHideDuration={6000}
+        onClose={() => setShowSnakBar(false)}
+        message={message}
+      />
+
       <Container sx={{ mt: 8 }}>
+        <Paper square sx={{ mb: 5 }}>
+          <Box
+            component="img"
+            alt="test"
+            src="/cover.png"
+            width="100%"
+            sx={{
+              borderRadius: 2,
+            }}
+          />
+        </Paper>
+
         <Paper
           variant="outlined"
           square
@@ -99,8 +127,49 @@ const RegisterPage = () => {
           <Typography variant={"h2"}>Registration Details</Typography>
           <Divider sx={{ mt: 4, mb: 2 }} />
           <Typography variant={"body1"} sx={{ mt: 3 }}>
-            Please enter your team member details to register
+            HACKTO-NIGHT is an overnight hackathon organized by the FOSS
+            Community of NSBM to be held on the 14th and 15th of October 2022.
+            This hackathon is only open for NSBM undergraduates, and we expect
+            the participation of around 100 competitors.
           </Typography>
+          <Typography variant={"body1"} sx={{ mt: 3 }}>
+            The team spirit, technological knowledge, problem-solving skills,
+            and coding skills of the participants will be put to the test during
+            this hackathon. We hope to increase the contribution of NSBM
+            undergraduates towards open source through this hackathon as well.
+          </Typography>
+          <Typography
+            variant={"h5"}
+            sx={{ mt: 5, textDecoration: "underline" }}
+          >
+            Event details are as follows:
+          </Typography>
+          <ListItem component="div" disablePadding sx={{ mt: 3 }}>
+            <ListItemText
+              primary={`Venue: Student Center, NSBM Green University `}
+            />
+          </ListItem>
+          <ListItem component="div" disablePadding>
+            <ListItemText primary={`Date: 14th & 15th October 2022 `} />
+          </ListItem>
+          <ListItem component="div" disablePadding>
+            <ListItemText
+              primary={`Time: 5.00 pm 14th October to 8.00 am 15th October`}
+            />
+          </ListItem>
+          <Typography
+            variant={"h5"}
+            sx={{ mt: 5, textDecoration: "underline", mb: 5 }}
+          >
+            Please feel free to contact us for further inquiries.
+          </Typography>
+          <ListItem component="div" disablePadding>
+            <ListItemText primary="Mr. Thaanu Perera (President - FOSS Community of NSBM): 077 329 8319" />
+          </ListItem>
+
+          <ListItem component="div" disablePadding>
+            <ListItemText primary="Ms. Nethmi Kodikara (President - Women in FOSS NSBM): 070 388 0082" />
+          </ListItem>
         </Paper>
 
         <Paper variant="outlined" square sx={{ p: 5, mt: 7, mb: 7 }}>
