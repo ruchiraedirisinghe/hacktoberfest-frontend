@@ -70,8 +70,20 @@ const RegisterPage = () => {
     },
   ]);
 
-  const createRegistration = useMutation((newRegistration: any) =>
-    axios.post(`${AppConfig.api_url}/registration`, newRegistration)
+  const createRegistration = useMutation(
+    (newRegistration: any) =>
+      axios.post(`${AppConfig.api_url}/registration`, newRegistration),
+    {
+      onSuccess: (response) => {
+        setShowSnakBar(true);
+        setMessage("Registration success");
+      },
+      onError: (error: Error) => {
+        setShowSnakBar(true);
+        setMessage(error.message);
+      },
+      onMutate: () => {},
+    }
   );
 
   const updateMemberValues = (
@@ -92,10 +104,7 @@ const RegisterPage = () => {
       members,
     };
 
-    const data = createRegistration.mutate(values);
-    console.log(data);
-    setShowSnakBar(true);
-    setMessage("Registration success");
+    createRegistration.mutate(values);
   };
 
   return (
