@@ -247,3 +247,11 @@
   text-decoration: none;
   transition: all 0.2s ease 0s;
 }
+
+.registerMainImg {
+  transition: all 0.4s cubic-bezier(0.8, -1, 0.2, 1.5) 0s;
+}
+
+.registerMainImg:hover {
+  box-shadow: rgb(64, 221, 255) 0px 0px 12px;
+}

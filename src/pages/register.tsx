@@ -117,17 +117,17 @@ const RegisterPage = () => {
       />
 
       <Container sx={{ mt: 8 }} className="redbackground">
-        <Paper square sx={{ mb: 5 }}>
-          <Box
-            component="img"
-            alt="test"
-            src="/cover.png"
-            width="100%"
-            sx={{
-              borderRadius: 2,
-            }}
-          />
-        </Paper>
+        <Box
+          component="img"
+          alt="test"
+          className="registerMainImg"
+          src="/cover.png"
+          width="100%"
+          sx={{
+            borderRadius: 2,
+            mb: 5,
+          }}
+        />
 
         <div className="kydKZM">
           <Typography variant={"h2"} className="headerShadow">
