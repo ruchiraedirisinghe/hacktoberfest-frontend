@@ -127,7 +127,6 @@ export const HeroPage = () => {
                   height={headerTemplateTwoImageHeight}
                   width={700}
                   alt=""
-                  objectFit="cover"
                 />
               </Box>
             </Grid>

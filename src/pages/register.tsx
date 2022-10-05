@@ -11,6 +11,8 @@ import {
   Divider,
   ListItemText,
 } from "@mui/material";
+import { useMutation } from "@tanstack/react-query";
+import axios from "axios";
 import { useState } from "react";
 
 enum UserInformation {
@@ -74,6 +76,10 @@ const RegisterPage = () => {
     },
   ]);
 
+  const createRegistration = useMutation((newRegistration: any) =>
+    axios.post(`${AppConfig.api_url}/registration`, newRegistration)
+  );
+
   const updateMemberValues = (
     index: number,
     value: string,
@@ -93,6 +99,7 @@ const RegisterPage = () => {
     };
 
     console.log(JSON.stringify(values));
+    createRegistration.mutate(values);
     setShowSnakBar(true);
     setMessage("Registration success");
   };

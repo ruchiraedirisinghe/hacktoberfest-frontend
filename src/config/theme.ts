@@ -13,7 +13,6 @@ declare module "@mui/material/styles" {
       };
     };
   }
-  // allow configuration using `createTheme`
   interface ThemeOptions {
     custom?: {
       borderRadius?: string;
