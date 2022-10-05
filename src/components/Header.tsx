@@ -57,12 +57,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export const Header = () => {
   const theme = useTheme();
-  const isSmDown = useMediaQuery(theme.breakpoints.down("sm"));
   const [showMe, setShowMe] = useState(false);
-  function toggle() {
-    setShowMe(!showMe);
-  }
-
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -77,7 +72,7 @@ export const Header = () => {
     <>
       <AppBar
         sx={{
-          borderBottom: (t) => `1px solid ${t.palette.primary.A200}`,
+          borderBottom: (t) => `1px solid #E5E1E6`,
           height: {
             xs: "60px",
             md: "80px",

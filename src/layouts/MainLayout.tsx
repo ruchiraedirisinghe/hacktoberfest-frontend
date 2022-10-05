@@ -7,13 +7,13 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   let primaryColor = "#170F1E";
-  let secondaryColor = "";
+  let secondaryColor = "#E5E1E6";
 
   const theme = createTheme({
     palette: {
       mode: "dark",
       primary: {
-        main: "#e5E1E6",
+        main: "#E5E1E6",
       },
       secondary: {
         main: "#f50057",
