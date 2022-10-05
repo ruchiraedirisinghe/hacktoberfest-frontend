@@ -1,5 +1,6 @@
 import {
   TextField,
+  Link,
   Alert,
   MenuItem,
   Snackbar,
@@ -182,11 +183,17 @@ const RegisterPage = () => {
             Please feel free to contact us for further inquiries.
           </Typography>
           <ListItem component="div" disablePadding>
-            <ListItemText primary="Mr. Thaanu Perera (President - FOSS Community of NSBM): 077 329 8319" />
+            <Typography>
+              Mr. Thaanu Perera (President - FOSS Community of NSBM)
+            </Typography>
+            <Link href="tel:0773298319">{"  077 329 8319"}</Link>
           </ListItem>
 
-          <ListItem component="div" disablePadding>
-            <ListItemText primary="Ms. Nethmi Kodikara (President - Women in FOSS NSBM): 070 388 0082" />
+          <ListItem component="div" disablePadding sx={{ mt: 2 }}>
+            <Typography>
+              Ms. Nethmi Kodikara (President - Women in FOSS NSBM)
+            </Typography>
+            <Link href="tel:0703880082">{"  070 388 0082"}</Link>
           </ListItem>
         </Paper>
 
@@ -289,21 +296,6 @@ const RegisterPage = () => {
                   sx={{ mt: 4 }}
                 />
 
-                <TextField
-                  id="outlined-basic"
-                  label="Guardian Name"
-                  variant="outlined"
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.GUARDIAN_NAME
-                    )
-                  }
-                  fullWidth
-                  sx={{ mt: 4 }}
-                />
-
                 <FormControl fullWidth sx={{ mt: 4 }}>
                   <InputLabel id="demo-simple-select-label">
                     Food preference
@@ -327,6 +319,21 @@ const RegisterPage = () => {
                     <MenuItem value={"Vegetarian"}>Vegetarian</MenuItem>
                   </Select>
                 </FormControl>
+
+                <TextField
+                  id="outlined-basic"
+                  label="Guardian Name"
+                  variant="outlined"
+                  onChange={(e) =>
+                    updateMemberValues(
+                      member.id,
+                      e.target.value,
+                      UserInformation.GUARDIAN_NAME
+                    )
+                  }
+                  fullWidth
+                  sx={{ mt: 4 }}
+                />
 
                 <TextField
                   id="outlined-basic"
