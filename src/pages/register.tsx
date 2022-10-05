@@ -1,6 +1,11 @@
 import {
   TextField,
+  Alert,
+  MenuItem,
   Snackbar,
+  FormControl,
+  InputLabel,
+  Select,
   Box,
   ListItem,
   ListItemButton,
@@ -21,6 +26,7 @@ enum UserInformation {
   FULL_NAME = "fullName",
   BATCH = "batch",
   STUDENT_ID = "studentId",
+  FOOD_PREF = "foodPref",
   PHONE = "phone",
   EMAIL = "email",
   GUARDIAN_NAME = "guardianName",
@@ -37,6 +43,7 @@ const RegisterPage = () => {
       fullName: "test",
       batch: "",
       studentId: "",
+      foodPref: "",
       email: "",
       phone: "",
       guardianName: "",
@@ -48,6 +55,7 @@ const RegisterPage = () => {
       fullName: "",
       batch: "",
       studentId: "",
+      foodPref: "",
       email: "",
       phone: "",
       guardianName: "",
@@ -59,6 +67,7 @@ const RegisterPage = () => {
       fullName: "",
       batch: "",
       studentId: "",
+      foodPref: "",
       email: "",
       phone: "",
       guardianName: "",
@@ -70,6 +79,7 @@ const RegisterPage = () => {
       fullName: "",
       batch: "",
       studentId: "",
+      foodPref: "",
       email: "",
       phone: "",
       guardianName: "",
@@ -293,6 +303,30 @@ const RegisterPage = () => {
                   fullWidth
                   sx={{ mt: 4 }}
                 />
+
+                <FormControl fullWidth sx={{ mt: 4 }}>
+                  <InputLabel id="demo-simple-select-label">
+                    Food preference
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    label="Food preference"
+                    onChange={(e) =>
+                      updateMemberValues(
+                        member.id,
+                        // @ts-ignore
+                        e.target.value,
+                        UserInformation.FOOD_PREF
+                      )
+                    }
+                  >
+                    <MenuItem value={"Non-Vegetarian "}>
+                      Non-Vegetarian{" "}
+                    </MenuItem>
+                    <MenuItem value={"Vegetarian"}>Vegetarian</MenuItem>
+                  </Select>
+                </FormControl>
 
                 <TextField
                   id="outlined-basic"

@@ -1,4 +1,4 @@
 //@ts-ignore
 export const AppConfig = {
-  api_url: "http://api.hacktonight.fossnsbm.org",
+  api_url: "https://api.hacktonight.fossnsbm.org",
 };
