@@ -1,11 +1,12 @@
 import {
   TextField,
+  Button,
   Container,
   Paper,
   Typography,
   Divider,
 } from "@mui/material";
-import { memo, useState } from "react";
+import { useState } from "react";
 
 enum UserInformation {
   id = "id",
@@ -19,6 +20,7 @@ enum UserInformation {
 }
 
 const RegisterPage = () => {
+  const [teamName, setTeamName] = useState("");
   const [members, setMembers] = useState([
     {
       id: 0,
@@ -77,6 +79,15 @@ const RegisterPage = () => {
     );
   };
 
+  const submitForm = () => {
+    const values = {
+      teamName: teamName,
+      members,
+    };
+
+    console.log(JSON.stringify(values));
+  };
+
   return (
     <>
       <Container sx={{ mt: 8 }}>
@@ -93,11 +104,12 @@ const RegisterPage = () => {
         </Paper>
 
         <Paper variant="outlined" square sx={{ p: 5, mt: 7, mb: 7 }}>
-          <Typography variant={"h5"}>Team Name</Typography>
+          <Typography variant={"h5"}>Team Details</Typography>
 
           <TextField
             id="outlined-basic"
-            label="Full Name"
+            onChange={(e) => setTeamName(e.target.value)}
+            label="Team Name"
             variant="outlined"
             fullWidth
             sx={{ mt: 4 }}
@@ -223,6 +235,14 @@ const RegisterPage = () => {
             </>
           );
         })}
+
+        <Button
+          variant="contained"
+          sx={{ mb: 10 }}
+          onClick={() => submitForm()}
+        >
+          Submit
+        </Button>
       </Container>
     </>
   );
