@@ -19,7 +19,6 @@
   top: -10%;
   -webkit-filter: brightness(0.4) sepia(1) hue-rotate(220deg) saturate(8);
   filter: brightness(0.4) sepia(1) hue-rotate(220deg) saturate(8);
-
   background-image: url("https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg");
   opacity: 0.2;
 
@@ -86,7 +85,6 @@
   top: -10%;
   -webkit-filter: brightness(0.3) sepia(1) hue-rotate(180deg) saturate(6);
   filter: brightness(0.3) sepia(1) hue-rotate(180deg) saturate(6);
-
   opacity: 0.2;
   -webkit-mask-image: radial-gradient(
     ellipse 70% 80% at 50% 50%,
@@ -128,4 +126,124 @@
   .bluebackground {
     padding: 0 24px;
   }
+}
+
+.divider_wrapper {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16px;
+  position: relative;
+  width: 100%;
+  -webkit-filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+  filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+  margin-top: 0;
+  margin-bottom: 64px;
+} /*!sc*/
+.divider_wrapper.reverse {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+} /*!sc*/
+.divider_wrapper .long {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  background: #e5e1e6;
+  height: 1px;
+  width: 50%;
+} /*!sc*/
+.divider_wrapper .angled_wrapper {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 16px;
+} /*!sc*/
+.divider_wrapper .angled_wrapper .angled {
+  background: #e5e1e6;
+  height: 1px;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 22px;
+} /*!sc*/
+.divider_wrapper .short {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  background: #e5e1e6;
+  height: 1px;
+  width: 50%;
+} /*!sc*/
+.divider_wrapper .garnish_wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20%;
+} /*!sc*/
+.divider_wrapper .garnish_wrapper .garnish {
+  background: #e5e1e6;
+  height: 100%;
+} /*!sc*/
+.divider_wrapper .garnish_wrapper .garnish.short {
+  width: 25%;
+} /*!sc*/
+.divider_wrapper .garnish_wrapper .garnish.long {
+  width: 75%;
+} /*!sc*/
+
+.gXAilS {
+  display: inline-block;
+  max-width: 100%;
+  height: 40px;
+  transition: all 0.2s ease 0s;
+}
+
+.gXAilS .btn {
+  background: rgb(234, 74, 170) none repeat scroll 0% 0%;
+  border: medium none;
+  border-radius: 2px;
+  clip-path: polygon(
+    12px 0px,
+    100% 0px,
+    100% 72%,
+    calc(100% - 12px) 100%,
+    0px 100%,
+    0px 12px
+  );
+  color: rgb(23, 15, 30);
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 18px;
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
 }

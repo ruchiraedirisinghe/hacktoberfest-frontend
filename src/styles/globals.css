@@ -242,3 +242,14 @@ p {
   text-shadow: rgba(255, 215, 77, 0.6) -1px -1px 6px,
     rgba(124, 127, 255, 0.6) 1px 1px 6px;
 }
+
+.large_divider {
+  max-width: 1312px;
+  padding: 0px 64px;
+  height: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0)
+    url("https://hacktoberfest.com/_next/static/media/repeater.6bd785ac.svg")
+    repeat scroll 0% 0%;
+}
