@@ -8,6 +8,7 @@ import "./styles/bluecard.css";
 import "./styles/team.css";
 import "./styles/computer.css";
 import "./styles/keyframes.css";
+import "./styles/base.css";
 
 import MainLayout from "./layouts/MainLayout";
 

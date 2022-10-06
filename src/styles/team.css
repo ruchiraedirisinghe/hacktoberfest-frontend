@@ -49,12 +49,16 @@
     color 0.4s ease;
   transition: letter-spacing 0.2s ease 0.2s, text-indent 0.2s ease 0.2s,
     color 0.4s ease;
-} /*!sc*/
+} 
+
+
 @media (max-width: 600px) {
   .team_member summary::before {
     margin-top: 4px;
   }
-} /*!sc*/
+} 
+
+
 .team_member summary:hover::before {
   color: #40ddff;
   -webkit-letter-spacing: 4px;
@@ -64,7 +68,9 @@
   text-indent: 4px;
   -webkit-animation: hiNqlP 0.2s linear;
   animation: hiNqlP 0.2s linear;
-} /*!sc*/
+} 
+
+
 @media (prefers-reduced-motion) {
   .team_member summary:hover::before {
     -webkit-animation-play-state: paused;
@@ -112,7 +118,9 @@
 
 .kXSbAG {
   margin: 32px 0;
-} /*!sc*/
+} 
+
+
 .kXSbAG details {
   margin: 24px 0;
   -webkit-transition: 0.2s ease;
@@ -124,32 +132,46 @@
   );
   border: 1px solid #7c7fff;
   border-radius: 24px;
-} /*!sc*/
+} 
+
+
 .kXSbAG details:hover {
   box-shadow: 0px 0px 12px #7c7fff;
-} /*!sc*/
+} 
+
+
 .kXSbAG details:hover summary img {
   -webkit-transform: rotate(0deg) translateY(-10px) !important;
   -ms-transform: rotate(0deg) translateY(-10px) !important;
   transform: rotate(0deg) translateY(-10px) !important;
   -webkit-filter: hue-rotate(140deg) contrast(150%) !important;
   filter: hue-rotate(140deg) contrast(150%) !important;
-} /*!sc*/
+} 
+
+
 .kXSbAG details > div {
   padding-right: 40px;
-} /*!sc*/
+} 
+
+
 .kXSbAG details ul {
   margin-top: 24px;
-} /*!sc*/
+} 
+
+
 .kXSbAG details a {
   text-transform: none;
   -webkit-transition: color 0.2s ease, filter 0.2s ease;
   transition: color 0.2s ease, filter 0.2s ease;
   font-variant-ligatures: none;
-} /*!sc*/
+} 
+
+
 .kXSbAG details a:after {
   content: " >";
-} /*!sc*/
+} 
+
+
 .kXSbAG details a:hover:after,
 .kXSbAG details a:focus:after {
   -webkit-filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
@@ -158,17 +180,23 @@
     drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
   -webkit-animation: bECLaM 1.5s linear infinite;
   animation: bECLaM 1.5s linear infinite;
-} /*!sc*/
+} 
+
+
 .kXSbAG details:nth-of-type(2n) summary img {
   -webkit-transform: rotate(4deg);
   -ms-transform: rotate(4deg);
   transform: rotate(4deg);
-} /*!sc*/
+} 
+
+
 .kXSbAG details summary {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-} /*!sc*/
+} 
+
+
 @media (max-width: 600px) {
   .kXSbAG details summary {
     padding: 16px 40px;
@@ -177,7 +205,9 @@
     -ms-flex-align: center;
     align-items: center;
   }
-} /*!sc*/
+} 
+
+
 .kXSbAG details summary img {
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -190,7 +220,9 @@
 
 .team_member {
   margin-bottom: 40px;
-} /*!sc*/
+} 
+
+
 .team_member summary {
   display: -webkit-box;
   display: -webkit-flex;
@@ -202,7 +234,9 @@
   align-items: center;
   list-style: none;
   cursor: pointer;
-} /*!sc*/
+} 
+
+
 @media (max-width: 600px) {
   .team_member summary {
     -webkit-align-items: flex-start;
@@ -210,13 +244,19 @@
     -ms-flex-align: flex-start;
     align-items: flex-start;
   }
-} /*!sc*/
+} 
+
+
 .team_member summary::-webkit-details-marker {
   display: none;
-} /*!sc*/
+} 
+
+
 .team_member summary::marker {
   display: none;
-} /*!sc*/
+} 
+
+
 .team_member summary::before {
   font-size: 16px;
   font-weight: normal;
@@ -238,12 +278,16 @@
     color 0.4s ease;
   transition: letter-spacing 0.2s ease 0.2s, text-indent 0.2s ease 0.2s,
     color 0.4s ease;
-} /*!sc*/
+} 
+
+
 @media (max-width: 600px) {
   .team_member summary::before {
     margin-top: 4px;
   }
-} /*!sc*/
+} 
+
+
 .team_member summary:hover::before {
   color: #40ddff;
   -webkit-letter-spacing: 4px;
@@ -253,16 +297,22 @@
   text-indent: 4px;
   -webkit-animation: hiNqlP 0.2s linear;
   animation: hiNqlP 0.2s linear;
-} /*!sc*/
+} 
+
+
 @media (prefers-reduced-motion) {
   .team_member summary:hover::before {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
-} /*!sc*/
+} 
+
+
 .team_member summary h4 {
   margin: 0 !important;
-} /*!sc*/
+} 
+
+
 .team_member[open] summary::before {
   -webkit-letter-spacing: 4px;
   -moz-letter-spacing: 4px;
@@ -271,7 +321,9 @@
   text-indent: 4px;
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
-} /*!sc*/
+} 
+
+
 .team_member[open] summary:hover::before {
   color: #7c7fff;
   -webkit-letter-spacing: 1px;
@@ -281,7 +333,9 @@
   text-indent: 1px;
   -webkit-animation: none;
   animation: none;
-} /*!sc*/
+} 
+
+
 .team_member > div {
   margin-left: 48px;
   padding-bottom: 24px;
@@ -293,7 +347,9 @@
   opacity: 0.75;
   text-shadow: none;
   text-transform: none;
-} /*!sc*/
+} 
+
+
 
 .team_top_header {
   border-top: 1px solid rgba(229, 225, 230, 0.1);
