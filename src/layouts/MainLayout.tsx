@@ -37,6 +37,7 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       h4: {
         fontFamily: "Oswald,sans-serif",
       },
+
       h5: {
         fontFamily: "Oswald,sans-serif",
       },

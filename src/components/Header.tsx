@@ -120,7 +120,7 @@ export const Header = () => {
                 }}
               >
                 <Button
-                  sx={{ mb: 10 }}
+                  sx={{ mb: 2 }}
                   component={Link}
                   className="btn special"
                   to={"/register"}
