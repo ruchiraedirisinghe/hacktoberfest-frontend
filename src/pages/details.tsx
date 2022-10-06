@@ -6,12 +6,16 @@ import { useParams } from "react-router-dom";
 import { AppConfig } from "../config";
 import { IMember } from "../types/member";
 import md5 from "md5";
+import { toast } from "react-toastify";
 
 export const DetailsPage = () => {
   const { id } = useParams();
-  const { isLoading, error, data } = useTeam(id);
+  const { isLoading, error, data } = useTeam(id!);
 
-  console.log(data);
+  if (error) {
+    // @ts-ignore
+    toast.error(error?.response?.data?.message);
+  }
 
   return (
     <>
