@@ -80,7 +80,7 @@ html {
 
 body {
   background: #170f1e;
-  background-image: url(https://hacktoberfest.com/_next/static/media/grain-dark.9d5983e6.png);
+  background-image: url(/grain-dark.png);
   color: #e5e1e6;
 }
 
@@ -190,7 +190,7 @@ p {
   left: 0px;
   top: -10%;
   filter: brightness(0.3) sepia(1) hue-rotate(180deg) saturate(6);
-  background-image: url("https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg");
+  background-image: url("/grid-square.svg");
   opacity: 0.2;
   mask-image: radial-gradient(70% 80%, black 40%, transparent 70%);
   width: 100%;
@@ -249,9 +249,7 @@ p {
   height: 24px;
   margin-right: auto;
   margin-left: auto;
-  background: rgba(0, 0, 0, 0)
-    url("https://hacktoberfest.com/_next/static/media/repeater.6bd785ac.svg")
-    repeat scroll 0% 0%;
+  background: rgba(0, 0, 0, 0) url("/repeater.svg") repeat scroll 0% 0%;
 }
 
 .shadow-text {
