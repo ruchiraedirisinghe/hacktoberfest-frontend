@@ -14,10 +14,12 @@ import { toast } from "react-toastify";
 import { useState } from "react";
 import { AppConfig } from "../config";
 import { UserInformation } from "../enum/UserDetails";
+import { useNavigate } from "react-router-dom";
 import axios, { AxiosError } from "axios";
 
 const RegisterPage = () => {
   const [teamName, setTeamName] = useState("");
+  const navigate = useNavigate();
   const [members, setMembers] = useState([
     {
       id: 0,
@@ -73,7 +75,10 @@ const RegisterPage = () => {
     {
       onSuccess: (response) => {
         toast.success("Registration Success !");
+        if (response.data?.data?._id)
+          navigate(`/profile/${response.data?.data?._id}`);
       },
+
       onError: (error: AxiosError) => {
         const errorMessages: any = error?.response?.data;
 
