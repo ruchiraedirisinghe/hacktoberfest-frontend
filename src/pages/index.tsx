@@ -59,7 +59,7 @@ const HomePage = () => {
             sx={{ mb: 5, mt: 3 }}
             component={"a"}
             className="btn special"
-            href={"/guidlines.pdf"}
+            href={"/guidelines.pdf"}
           >
             Download Guidlines
           </Button>
