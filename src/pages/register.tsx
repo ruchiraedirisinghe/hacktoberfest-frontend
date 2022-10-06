@@ -1,26 +1,23 @@
 import {
   TextField,
   MenuItem,
-  Snackbar,
   FormControl,
   InputLabel,
   Select,
   Box,
   Button,
   Container,
-  Paper,
   Typography,
 } from "@mui/material";
 import { useMutation } from "@tanstack/react-query";
+import { toast } from "react-toastify";
 import { useState } from "react";
 import { AppConfig } from "../config";
 import { UserInformation } from "../enum/UserDetails";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 const RegisterPage = () => {
   const [teamName, setTeamName] = useState("");
-  const [showSnackBar, setShowSnakBar] = useState(false);
-  const [message, setMessage] = useState("");
   const [members, setMembers] = useState([
     {
       id: 0,
@@ -75,12 +72,24 @@ const RegisterPage = () => {
       axios.post(`${AppConfig.api_url}/registration`, newRegistration),
     {
       onSuccess: (response) => {
-        setShowSnakBar(true);
-        setMessage("Registration success");
+        toast.success("Registration Success !");
       },
-      onError: (error: Error) => {
-        setShowSnakBar(true);
-        setMessage(error.message);
+      onError: (error: AxiosError) => {
+        const errorMessages: any = error?.response?.data;
+
+        if (!errorMessages) {
+          toast.error(error.message);
+          return;
+        }
+
+        if (!Array.isArray(errorMessages.message)) {
+          toast.error(errorMessages.message);
+          return;
+        }
+
+        for (const message of errorMessages?.message) {
+          toast.error(message);
+        }
       },
       onMutate: () => {},
     }
@@ -99,9 +108,17 @@ const RegisterPage = () => {
   };
 
   const submitForm = () => {
+    let newMembers = members;
+
+    if (members[3]) {
+      if (members[3].fullName == "" && members[3].email == "") {
+        newMembers.pop();
+      }
+    }
+
     const values = {
       teamName: teamName,
-      members,
+      members: newMembers,
     };
 
     createRegistration.mutate(values);
@@ -109,13 +126,6 @@ const RegisterPage = () => {
 
   return (
     <>
-      <Snackbar
-        open={showSnackBar}
-        autoHideDuration={6000}
-        onClose={() => setShowSnakBar(false)}
-        message={message}
-      />
-
       <Container sx={{ mt: 8 }} className="redbackground">
         <Box
           component="img"
