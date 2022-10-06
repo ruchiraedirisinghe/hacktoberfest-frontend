@@ -1,0 +1,18 @@
+body {
+  background: #170f1e;
+  background-image: url(https://hacktoberfest.com/_next/static/media/grain-dark.9d5983e6.png);
+  color: #e5e1e6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  text-shadow: -1px -1px 6px rgba(255, 215, 77, 0.6),
+    1px 1px 6px rgba(124, 127, 255, 0.6);
+  word-wrap: break-word;
+}
