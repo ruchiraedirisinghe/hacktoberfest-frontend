@@ -38,7 +38,7 @@ export const DetailsPage = () => {
             sx={{ mb: 10 }}
             component={Link}
             className="btn special"
-            href={"/guidlines.pdf"}
+            href={"/guidelines.pdf"}
           >
             Download Guidlines
           </Button>

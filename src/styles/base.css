@@ -2,6 +2,7 @@ body {
   background: #170f1e;
   background-image: url(/grain-dark.png);
   color: #e5e1e6;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 h1,
