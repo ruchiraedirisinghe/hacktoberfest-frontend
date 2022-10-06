@@ -3,9 +3,9 @@ import "./heart.css";
 export const HeartLogo = () => {
   return (
     <>
-      <section class="hero__StyledSection-sc-17monyh-0 iBJyMT">
-        <div class="hero__StyledContent-sc-17monyh-2 cqhcqg">
-          <div class="pixels__StyledDiv-sc-qc1bi4-0 pixels__PixelHeartWrapper-sc-qc1bi4-5 dHiUPG fYUoIa">
+      <section className="hero__StyledSection-sc-17monyh-0 iBJyMT">
+        <div className="hero__StyledContent-sc-17monyh-2 cqhcqg">
+          <div className="pixels__StyledDiv-sc-qc1bi4-0 pixels__PixelHeartWrapper-sc-qc1bi4-5 dHiUPG fYUoIa">
             <svg
               width="240"
               height="120"
