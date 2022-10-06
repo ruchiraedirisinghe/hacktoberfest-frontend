@@ -129,7 +129,7 @@ const RegisterPage = () => {
           }}
         />
 
-        <div className="kydKZM">
+        <div>
           <Typography variant={"h2"} className="headerShadow">
             Registration Details
           </Typography>
@@ -147,9 +147,9 @@ const RegisterPage = () => {
           </Typography>
         </div>
 
-        <Paper
+        <Box
           sx={{ p: 3, mt: 7, mb: 7, borderRadius: 1 }}
-          className="paperglassdetails"
+          className="paperglassdetails kydKZM"
         >
           <Typography variant={"h5"} className="headersmallShadow">
             Team Details
@@ -163,12 +163,12 @@ const RegisterPage = () => {
             fullWidth
             sx={{ mt: 3 }}
           />
-        </Paper>
+        </Box>
 
         {members.map((member) => {
           return (
             <>
-              <Paper
+              <Box
                 sx={{ p: 3, mt: 7, mb: 7, borderRadius: 1 }}
                 className="paperglassdetails"
               >
@@ -307,7 +307,7 @@ const RegisterPage = () => {
                   fullWidth
                   sx={{ mt: 4, mb: 4 }}
                 />
-              </Paper>
+              </Box>
             </>
           );
         })}

@@ -1,5 +1,5 @@
 .blueCard::after {
-  background-image: url("/_next/static/media/sparkle.57c3794f.gif");
+  background-image: url("/grid-square.svg");
   background-size: cover;
   background-position: center center;
   border-radius: inherit;

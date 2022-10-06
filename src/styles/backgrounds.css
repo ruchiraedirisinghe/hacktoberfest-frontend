@@ -19,7 +19,7 @@
   top: -10%;
   -webkit-filter: brightness(0.4) sepia(1) hue-rotate(220deg) saturate(8);
   filter: brightness(0.4) sepia(1) hue-rotate(220deg) saturate(8);
-  background-image: url("https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg");
+  background-image: url("/grid-square.svg");
   opacity: 0.2;
 
   -webkit-mask-image: radial-gradient(
@@ -146,13 +146,13 @@
     drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
   margin-top: 0;
   margin-bottom: 64px;
-} 
+}
 
 .divider_wrapper.reverse {
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
   transform: scaleX(-1);
-} 
+}
 
 .divider_wrapper .long {
   -webkit-align-self: flex-end;
@@ -161,7 +161,7 @@
   background: #e5e1e6;
   height: 1px;
   width: 50%;
-} 
+}
 
 .divider_wrapper .angled_wrapper {
   -webkit-align-items: center;
@@ -179,7 +179,7 @@
   justify-content: center;
   overflow: hidden;
   width: 16px;
-} 
+}
 
 .divider_wrapper .angled_wrapper .angled {
   background: #e5e1e6;
@@ -189,7 +189,7 @@
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
   width: 22px;
-} 
+}
 
 .divider_wrapper .short {
   -webkit-align-self: flex-start;
@@ -198,7 +198,7 @@
   background: #e5e1e6;
   height: 1px;
   width: 50%;
-} 
+}
 
 .divider_wrapper .garnish_wrapper {
   display: -webkit-box;
@@ -211,21 +211,20 @@
   position: absolute;
   top: 0;
   width: 20%;
-} 
+}
 
 .divider_wrapper .garnish_wrapper .garnish {
   background: #e5e1e6;
   height: 100%;
-} 
+}
 
 .divider_wrapper .garnish_wrapper .garnish.short {
   width: 25%;
-} 
+}
 
 .divider_wrapper .garnish_wrapper .garnish.long {
   width: 75%;
-} 
-
+}
 
 .pinkButton {
   display: inline-block;
@@ -328,7 +327,7 @@
   98% {
     opacity: 1;
   }
-} 
+}
 
 @keyframes izrrXy {
   0% {
@@ -371,7 +370,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-} 
+}
 
 .hOLCdd:before {
   content: "";
@@ -381,7 +380,7 @@
   top: -10%;
   -webkit-filter: brightness(0.4) sepia(1) hue-rotate(205deg) saturate(8);
   filter: brightness(0.4) sepia(1) hue-rotate(205deg) saturate(8);
-  background-image: url(https://hacktoberfest.com/_next/static/media/grid-square.7c0cbc15.svg);
+  background-image: url(/grid-square.svg);
   opacity: 0.2;
   -webkit-mask-image: radial-gradient(
     ellipse 70% 80% at 50% 50%,
@@ -396,7 +395,7 @@
   width: 100%;
   height: 120%;
   z-index: -1;
-} 
+}
 
 .hOLCdd:after {
   position: absolute;
@@ -418,20 +417,20 @@
     black -40%,
     transparent 60%
   );
-} 
+}
 
 @media (max-width: 600px) {
   .hOLCdd {
     padding: 0 24px;
   }
-} 
-
+}
 
 .ksQOpk {
   border-top: 1px solid rgba(229, 225, 230, 0.5);
+  border-width: 1px;
   padding: 40px 16px;
   text-transform: uppercase;
-} 
+}
 
 .ksQOpk::before {
   position: absolute;
@@ -441,8 +440,7 @@
   content: "";
   height: 1px;
   width: 100%;
-  background: linear-gradient(90deg, #ffd74d 0%, #40ddff 50%, #7c7fff 100%);
-} 
+}
 
 .ksQOpk h3 {
   margin: 16px 0;
@@ -451,14 +449,14 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
-} 
+}
 
 .ksQOpk ul li {
   display: inline-block;
   margin: 0 40px 0 0;
   word-wrap: break-word;
   max-width: 100%;
-} 
+}
 
 .ksQOpk ul li span {
   font-family: "JetBrains Mono";
@@ -467,5 +465,4 @@
   font-size: 16px;
   line-height: 24px;
   opacity: 0.5;
-} 
-
+}
