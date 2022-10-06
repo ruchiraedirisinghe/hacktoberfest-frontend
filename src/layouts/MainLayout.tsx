@@ -23,6 +23,30 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         paper: "#170F1E",
       },
     },
+    typography: {
+      h1: {
+        fontFamily: "Oswald,sans-serif",
+      },
+
+      h2: {
+        fontFamily: "Oswald,sans-serif",
+      },
+      h3: {
+        fontFamily: "Oswald,sans-serif",
+      },
+      h4: {
+        fontFamily: "Oswald,sans-serif",
+      },
+      h5: {
+        fontFamily: "Oswald,sans-serif",
+      },
+      subtitle1: {
+        fontSize: 12,
+      },
+      body1: {
+        fontFamily: '"JetBrains Mono", sans-serif',
+      },
+    },
   });
 
   return (

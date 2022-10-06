@@ -72,7 +72,7 @@ export const Header = () => {
     <>
       <AppBar
         sx={{
-          borderBottom: (t) => `1px solid #E5E1E6`,
+          boxShadow: "rgb(229, 225, 230) 0px 0px 12px",
           height: {
             xs: "60px",
             md: "80px",
@@ -94,7 +94,7 @@ export const Header = () => {
               <Box
                 component="img"
                 alt="test"
-                src="https://fossnsbm.org/content/images/2022/07/Foss.png"
+                src="/logo.png"
                 height={{ xs: 45, md: 55, display: "block" }}
                 width="auto"
               />
