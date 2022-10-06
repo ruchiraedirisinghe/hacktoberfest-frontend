@@ -253,5 +253,98 @@
 }
 
 .registerMainImg:hover {
-  box-shadow: rgb(64, 221, 255) 0px 0px 12px;
+  box-shadow: rgb(255, 68, 68) 0px 0px 12px;
+}
+
+.shadowTextRed {
+  text-shadow: 0 -40px 100px, 0 0 1px, 0 0 0.5em #ff4444, 0 0 0.2em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+/*animation: 2s ease 0s infinite normal none running izrrXy;*/
+
+@-webkit-keyframes izrrXy {
+  0% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 1;
+  }
+} /*!sc*/
+@keyframes izrrXy {
+  0% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 1;
+  }
+}
+
+.appBarBlink {
+  animation: blink linear infinite 2s;
+  background: "transparent";
+  box-shadow: rgb(255, 68, 68) 0px 0px 12px;
 }
