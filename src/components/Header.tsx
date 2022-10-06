@@ -71,8 +71,9 @@ export const Header = () => {
   return (
     <>
       <AppBar
+        className="appBarBlink"
         sx={{
-          boxShadow: "rgb(229, 225, 230) 0px 0px 12px",
+          boxShadow: "rgba(229, 225, 230, 0.4)0px 1px 15px",
           height: {
             xs: "60px",
             md: "80px",
@@ -119,7 +120,7 @@ export const Header = () => {
                 }}
               >
                 <Button
-                  sx={{ mb: 10 }}
+                  sx={{ mb: 2 }}
                   component={Link}
                   className="btn special"
                   to={"/register"}

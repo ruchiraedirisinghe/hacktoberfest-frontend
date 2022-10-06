@@ -1,0 +1,108 @@
+.gygrTj {
+  display: block;
+} /*!sc*/
+.gygrTj .badge {
+  width: 100%;
+  margin: 0 auto 24px auto;
+  height: 224px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-contents: center;
+  -ms-flex-pack: center;
+  justify-contents: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+} /*!sc*/
+.gygrTj .badge .globe {
+  position: absolute;
+  -webkit-filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+  filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+  width: 100%;
+} /*!sc*/
+.gygrTj .badge .h {
+  width: 50%;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+  filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+} /*!sc*/
+.gygrTj .text {
+  -webkit-filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+  filter: drop-shadow(-1px -1px 2px rgba(255, 215, 77, 0.6))
+    drop-shadow(1px 1px 2px rgba(124, 127, 255, 0.6));
+} /*!sc*/
+.fKnYUP {
+  display: block;
+  width: 80px;
+} /*!sc*/
+
+.lhugCu {
+  display: block;
+} /*!sc*/
+.lhugCu div {
+  margin: 0 auto;
+  text-align: center;
+} /*!sc*/
+.lhugCu a {
+  margin: 40px auto 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+} /*!sc*/
+.lhugCu a .btn {
+  width: 344px;
+} /*!sc*/
+@media (max-width: 500px) {
+  .lhugCu a {
+    width: 100%;
+  }
+  .lhugCu a .btn {
+    width: 100%;
+  }
+} /*!sc*/
+
+svg[Attributes Style] {
+  width: 113;
+  height: 124;
+  fill: none;
+}
+
+.cqhcqg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1312px;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  position: inherit;
+} /*!sc*/
+data-styled.g13[id="hero__StyledContent-sc-17monyh-2"] {
+  content: "cqhcqg,";
+} /*!sc*/

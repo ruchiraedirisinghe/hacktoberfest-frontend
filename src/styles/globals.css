@@ -253,3 +253,9 @@ p {
     url("https://hacktoberfest.com/_next/static/media/repeater.6bd785ac.svg")
     repeat scroll 0% 0%;
 }
+
+.shadow-text {
+  text-shadow: rgb(255 215 77 / 60%) -1px -1px 6px,
+    rgb(124 127 255 / 60%) 1px 1px 6px;
+  overflow-wrap: break-word;
+}

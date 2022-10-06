@@ -9,6 +9,7 @@ const Menubar: React.FC = () => {
         display: { xs: "none", md: "flex" },
         gap: 12,
       }}
+      className="shadowTextRed"
     >
       <Link style={{ textDecoration: "none" }} to="/">
         <Typography fontSize={16} fontWeight="600">
