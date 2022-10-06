@@ -73,14 +73,14 @@ export const Header = () => {
       <AppBar
         className="appBarBlink"
         sx={{
-          boxShadow: "rgba(229, 225, 230, 0.4)0px 1px 15px",
           height: {
             xs: "60px",
             md: "80px",
           },
           borderRadius: 0,
         }}
-        position="sticky"
+        style={{ background: "transparent", boxShadow: "none" }}
+        position="static"
         elevation={0}
       >
         <Container
@@ -120,7 +120,7 @@ export const Header = () => {
                 }}
               >
                 <Button
-                  sx={{ mb: 2 }}
+                  sx={{ mb: 10 }}
                   component={Link}
                   className="btn special"
                   to={"/register"}
