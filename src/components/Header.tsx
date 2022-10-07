@@ -1,6 +1,7 @@
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { AppConfig } from "../config";
 import {
   Box,
   Stack,
@@ -126,7 +127,11 @@ export const Header = () => {
                   to={"/register"}
                   fullWidth
                 >
-                  Register Now
+                  {AppConfig.register_closed ? (
+                    <>Registration closed</>
+                  ) : (
+                    <>Register Now</>
+                  )}
                 </Button>
               </div>
             </Box>

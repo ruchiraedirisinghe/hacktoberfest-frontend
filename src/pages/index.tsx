@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { TheLogo } from "../components/Logo";
 import { HeartLogo } from "../components/Logo/Heart";
 import { Divider } from "../components/Divider";
-
+import { AppConfig } from "../config";
 const HomePage = () => {
   return (
     <>
@@ -25,7 +25,11 @@ const HomePage = () => {
           className="btn special"
           to={"/register"}
         >
-          REGISTRATION NOW OPEN
+          {AppConfig.register_closed ? (
+            <>Registrations are closed...</>
+          ) : (
+            <>REGISTRATION NOW OPEN</>
+          )}
         </Button>
       </div>
 
