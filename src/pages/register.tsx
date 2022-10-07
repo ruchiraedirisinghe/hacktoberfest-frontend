@@ -131,218 +131,270 @@ const RegisterPage = () => {
 
   return (
     <>
-      <Container sx={{ mt: 8 }} className="redbackground">
-        <Box
-          component="img"
-          alt="test"
-          className="registerMainImg"
-          src="/cover.png"
-          width="100%"
-          sx={{
-            borderRadius: 2,
-            mb: 5,
-          }}
-        />
+      {AppConfig.register_closed ? (
+        <>
+          <Container sx={{ mt: 8 }} className="redbackground">
+            <Typography variant={"h2"} className="headerShadow">
+              Registration closed...
+            </Typography>
 
-        <div>
-          <Typography variant={"h2"} className="headerShadow">
-            Registration Details
-          </Typography>
+            <Typography
+              variant={"body1"}
+              component={"p"}
+              mt={3}
+              className="paraShadow"
+            >
+              HACKTO-NIGHT surpassed the expected number of registrations in
+              less than 48 hours due to your quick response! 😍
+            </Typography>
 
-          <Typography
-            variant={"body1"}
-            component={"p"}
-            mt={3}
-            className="paraShadow"
-          >
-            HACKTO-NIGHT is an overnight hackathon organized by the FOSS
-            Community of NSBM to be held on the 14th and 15th of October 2022.
-            This hackathon is only open for NSBM undergraduates, and we expect
-            the participation of around 100 competitors.
-          </Typography>
-        </div>
+            <Typography
+              variant={"body1"}
+              component={"p"}
+              mt={3}
+              className="paraShadow"
+            >
+              We are excited about your enthusiasm towards our hackathon! But
+              sadly we can only allow a limited number of participants as this
+              is an overnight event.
+            </Typography>
 
-        <Box
-          sx={{ p: 3, mt: 7, mb: 7, borderRadius: 1 }}
-          className="paperglassdetails kydKZM"
-        >
-          <Typography variant={"h5"} className="headersmallShadow">
-            Team Details
-          </Typography>
+            <Typography
+              variant={"body1"}
+              component={"p"}
+              mt={3}
+              className="paraShadow"
+            >
+              As of now, new participants cannot register for HACKTO-NIGHT, and
+              we're sorry for anyone who could not register! Better luck next
+              time!
+            </Typography>
 
-          <TextField
-            id="outlined-basic"
-            onChange={(e) => setTeamName(e.target.value)}
-            label="Team Name"
-            variant="outlined"
-            fullWidth
-            sx={{ mt: 3 }}
+            <Typography
+              variant={"body1"}
+              component={"p"}
+              mt={3}
+              className="paraShadow"
+            >
+              Thank you again for the interest you've shown towards
+              HACKTO-NIGHT!
+            </Typography>
+          </Container>
+        </>
+      ) : (
+        <Container sx={{ mt: 8 }} className="redbackground">
+          <Box
+            component="img"
+            alt="test"
+            className="registerMainImg"
+            src="/cover.png"
+            width="100%"
+            sx={{
+              borderRadius: 2,
+              mb: 5,
+            }}
           />
-        </Box>
 
-        {members.map((member) => {
-          return (
-            <>
-              <Box
-                sx={{ p: 3, mt: 7, mb: 7, borderRadius: 1 }}
-                className="paperglassdetails"
-              >
-                <Typography variant={"h5"} className="headersmallShadow">
-                  {member.id == 0 ? "Member One " : null}
-                  {member.id == 1 ? "Member Two " : null}
-                  {member.id == 2 ? "Member Three " : null}
-                  {member.id == 3 ? "Member Four (optional)" : null}
-                </Typography>
+          <div>
+            <Typography variant={"h2"} className="headerShadow">
+              Registration Details
+            </Typography>
 
-                <TextField
-                  id="outlined-basic"
-                  label="Full Name"
-                  variant="outlined"
-                  fullWidth
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.FULL_NAME
-                    )
-                  }
-                  sx={{ mt: 4 }}
-                />
+            <Typography
+              variant={"body1"}
+              component={"p"}
+              mt={3}
+              className="paraShadow"
+            >
+              HACKTO-NIGHT is an overnight hackathon organized by the FOSS
+              Community of NSBM to be held on the 14th and 15th of October 2022.
+              This hackathon is only open for NSBM undergraduates, and we expect
+              the participation of around 100 competitors.
+            </Typography>
+          </div>
 
-                <TextField
-                  id="outlined-basic"
-                  label="Batch"
-                  variant="outlined"
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.BATCH
-                    )
-                  }
-                  fullWidth
-                  sx={{ mt: 4 }}
-                />
+          <Box
+            sx={{ p: 3, mt: 7, mb: 7, borderRadius: 1 }}
+            className="paperglassdetails kydKZM"
+          >
+            <Typography variant={"h5"} className="headersmallShadow">
+              Team Details
+            </Typography>
 
-                <TextField
-                  id="outlined-basic"
-                  label="Student ID"
-                  variant="outlined"
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.STUDENT_ID
-                    )
-                  }
-                  fullWidth
-                  sx={{ mt: 4 }}
-                />
+            <TextField
+              id="outlined-basic"
+              onChange={(e) => setTeamName(e.target.value)}
+              label="Team Name"
+              variant="outlined"
+              fullWidth
+              sx={{ mt: 3 }}
+            />
+          </Box>
 
-                <TextField
-                  id="outlined-basic"
-                  label="Email Address"
-                  variant="outlined"
-                  fullWidth
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.EMAIL
-                    )
-                  }
-                  sx={{ mt: 4 }}
-                />
+          {members.map((member) => {
+            return (
+              <>
+                <Box
+                  sx={{ p: 3, mt: 7, mb: 7, borderRadius: 1 }}
+                  className="paperglassdetails"
+                >
+                  <Typography variant={"h5"} className="headersmallShadow">
+                    {member.id == 0 ? "Member One " : null}
+                    {member.id == 1 ? "Member Two " : null}
+                    {member.id == 2 ? "Member Three " : null}
+                    {member.id == 3 ? "Member Four (optional)" : null}
+                  </Typography>
 
-                <TextField
-                  id="outlined-basic"
-                  label="Phone Number"
-                  variant="outlined"
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.PHONE
-                    )
-                  }
-                  fullWidth
-                  sx={{ mt: 4 }}
-                />
-
-                <FormControl fullWidth sx={{ mt: 4 }}>
-                  <InputLabel id="demo-simple-select-label">
-                    Food preference
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    label="Food preference"
+                  <TextField
+                    id="outlined-basic"
+                    label="Full Name"
+                    variant="outlined"
+                    fullWidth
                     onChange={(e) =>
                       updateMemberValues(
                         member.id,
-                        // @ts-ignore
                         e.target.value,
-                        UserInformation.FOOD_PREF
+                        UserInformation.FULL_NAME
                       )
                     }
-                  >
-                    <MenuItem value={"Non-Vegetarian "}>
-                      Non-Vegetarian{" "}
-                    </MenuItem>
-                    <MenuItem value={"Vegetarian"}>Vegetarian</MenuItem>
-                  </Select>
-                </FormControl>
+                    sx={{ mt: 4 }}
+                  />
 
-                <TextField
-                  id="outlined-basic"
-                  label="Guardian Name"
-                  variant="outlined"
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.GUARDIAN_NAME
-                    )
-                  }
-                  fullWidth
-                  sx={{ mt: 4 }}
-                />
+                  <TextField
+                    id="outlined-basic"
+                    label="Batch"
+                    variant="outlined"
+                    onChange={(e) =>
+                      updateMemberValues(
+                        member.id,
+                        e.target.value,
+                        UserInformation.BATCH
+                      )
+                    }
+                    fullWidth
+                    sx={{ mt: 4 }}
+                  />
 
-                <TextField
-                  id="outlined-basic"
-                  label="Guardian’s Phone Number "
-                  variant="outlined"
-                  onChange={(e) =>
-                    updateMemberValues(
-                      member.id,
-                      e.target.value,
-                      UserInformation.GUARDIAN_PHONE
-                    )
-                  }
-                  fullWidth
-                  sx={{ mt: 4, mb: 4 }}
-                />
-              </Box>
-            </>
-          );
-        })}
-        <div
-          className="htb-button"
-          style={{
-            width: "100%",
-          }}
-        >
-          <Button
-            variant="contained"
-            sx={{ mb: 10 }}
-            className="btn special"
-            onClick={() => submitForm()}
-            fullWidth
+                  <TextField
+                    id="outlined-basic"
+                    label="Student ID"
+                    variant="outlined"
+                    onChange={(e) =>
+                      updateMemberValues(
+                        member.id,
+                        e.target.value,
+                        UserInformation.STUDENT_ID
+                      )
+                    }
+                    fullWidth
+                    sx={{ mt: 4 }}
+                  />
+
+                  <TextField
+                    id="outlined-basic"
+                    label="Email Address"
+                    variant="outlined"
+                    fullWidth
+                    onChange={(e) =>
+                      updateMemberValues(
+                        member.id,
+                        e.target.value,
+                        UserInformation.EMAIL
+                      )
+                    }
+                    sx={{ mt: 4 }}
+                  />
+
+                  <TextField
+                    id="outlined-basic"
+                    label="Phone Number"
+                    variant="outlined"
+                    onChange={(e) =>
+                      updateMemberValues(
+                        member.id,
+                        e.target.value,
+                        UserInformation.PHONE
+                      )
+                    }
+                    fullWidth
+                    sx={{ mt: 4 }}
+                  />
+
+                  <FormControl fullWidth sx={{ mt: 4 }}>
+                    <InputLabel id="demo-simple-select-label">
+                      Food preference
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      label="Food preference"
+                      onChange={(e) =>
+                        updateMemberValues(
+                          member.id,
+                          // @ts-ignore
+                          e.target.value,
+                          UserInformation.FOOD_PREF
+                        )
+                      }
+                    >
+                      <MenuItem value={"Non-Vegetarian "}>
+                        Non-Vegetarian{" "}
+                      </MenuItem>
+                      <MenuItem value={"Vegetarian"}>Vegetarian</MenuItem>
+                    </Select>
+                  </FormControl>
+
+                  <TextField
+                    id="outlined-basic"
+                    label="Guardian Name"
+                    variant="outlined"
+                    onChange={(e) =>
+                      updateMemberValues(
+                        member.id,
+                        e.target.value,
+                        UserInformation.GUARDIAN_NAME
+                      )
+                    }
+                    fullWidth
+                    sx={{ mt: 4 }}
+                  />
+
+                  <TextField
+                    id="outlined-basic"
+                    label="Guardian’s Phone Number "
+                    variant="outlined"
+                    onChange={(e) =>
+                      updateMemberValues(
+                        member.id,
+                        e.target.value,
+                        UserInformation.GUARDIAN_PHONE
+                      )
+                    }
+                    fullWidth
+                    sx={{ mt: 4, mb: 4 }}
+                  />
+                </Box>
+              </>
+            );
+          })}
+          <div
+            className="htb-button"
+            style={{
+              width: "100%",
+            }}
           >
-            Submit
-          </Button>
-        </div>
-      </Container>
+            <Button
+              variant="contained"
+              sx={{ mb: 10 }}
+              className="btn special"
+              onClick={() => submitForm()}
+              fullWidth
+            >
+              Submit
+            </Button>
+          </div>
+        </Container>
+      )}
     </>
   );
 };
