@@ -8,7 +8,7 @@ import { Divider } from "../components/Divider";
 const HomePage = () => {
   return (
     <>
-      <Box pt={{ xs: 11.5, md: 0 }} className="hOLCdd">
+      <Box pt={{ xs: 0, md: 0 }} className="hOLCdd">
         <TheLogo />
       </Box>
 
