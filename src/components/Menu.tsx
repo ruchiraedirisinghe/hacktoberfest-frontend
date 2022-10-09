@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button, Toolbar, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Link as RSLink } from "react-scroll";
 
 const Menubar: React.FC = () => {
   return (
@@ -17,15 +18,15 @@ const Menubar: React.FC = () => {
         </Typography>
       </Link>
 
-      <Link style={{ textDecoration: "none" }} to="/about">
+      <RSLink activeClass="active" style={{ textDecoration: "none" }} spy smooth to="/about">
         <Typography fontSize={16} fontWeight="600">
           About
         </Typography>
-      </Link>
+      </RSLink>
 
       <Link style={{ textDecoration: "none" }} to="/events">
         <Typography fontSize={16} fontWeight="600">
-          Events
+          LeaderBoard
         </Typography>
       </Link>
 
@@ -35,11 +36,11 @@ const Menubar: React.FC = () => {
         </Typography>
       </Link>
 
-      <Link style={{ textDecoration: "none" }} to="#">
+      {/* <Link style={{ textDecoration: "none" }} to="#">
         <Typography fontSize={16} fontWeight="600">
           Forum
         </Typography>
-      </Link>
+      </Link> */}
     </Box>
   );
 };

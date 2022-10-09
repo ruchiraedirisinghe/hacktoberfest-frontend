@@ -195,8 +195,8 @@ export const Header = () => {
           </ListItem>
 
           <ListItem key={"events"} disablePadding>
-            <ListItemButton component={Link} to="/events">
-              <ListItemText primary={"Events"} />
+            <ListItemButton component={Link} to="/Leaderboard">
+              <ListItemText primary={"Leaderboard"} />
             </ListItemButton>
           </ListItem>
 
