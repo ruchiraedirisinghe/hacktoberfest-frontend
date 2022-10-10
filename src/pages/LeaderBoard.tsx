@@ -14,12 +14,23 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const LeaderBoard = () =>{
 
     return(
+      <>
+        {AppConfig.leaderboard_closed ? (
+        <>
         <Container sx={{ mt: 5 }} maxWidth="lg">
-            <Divider></Divider>
-            <Typography variant={"h2"} className="headerShadow" sx={{ mb: 4 }}>
-                Leaderboard
-            </Typography>
-
+        <Divider></Divider>
+        <Typography variant={"h2"} className="headerShadow" sx={{ mb: 4 }}>
+        This Competition not started yet. Please wait
+        </Typography>
+        </Container>
+        </>
+        ):(
+        <Container sx={{ mt: 5 }} maxWidth="lg">
+        <Divider></Divider>
+        <Typography variant={"h2"} className="headerShadow" sx={{ mb: 4 }}>
+        Leaderboard
+        </Typography>
+          
     <Paper>
      <Accordion>
         <AccordionSummary
@@ -211,8 +222,11 @@ const LeaderBoard = () =>{
       </Accordion>
     </Paper>
     <br/>
-        </Container>
+        </Container>   
+        )}
+        </> 
     );
 }
 
 export default LeaderBoard;
+
