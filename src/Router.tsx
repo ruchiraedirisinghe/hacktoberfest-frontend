@@ -5,6 +5,7 @@ import RegisterPage from "./pages/register";
 import HomePage from "./pages";
 import { DetailsPage } from "./pages/details";
 import { PageNotFound } from "./pages/_404";
+import FooterSection from "./components/FooterSection";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
     element: (
       <MainLayout>
         <HomePage />
+        <FooterSection />
       </MainLayout>
     ),
   },
