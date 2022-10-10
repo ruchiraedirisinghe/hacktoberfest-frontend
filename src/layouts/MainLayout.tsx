@@ -4,7 +4,6 @@ import Values from "values.js";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import FooterSection from "../components/FooterSection";
 
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   let primaryColor = "#170F1E";
@@ -57,7 +56,6 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <CssBaseline />
         <Header />
         <div>{children}</div>
-        <FooterSection />
       </ThemeProvider>
     </>
   );
