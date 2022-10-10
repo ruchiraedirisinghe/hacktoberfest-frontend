@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "./FooterSection.scss";
 import { Link } from "react-router-dom";
 import { Link as RSLink } from "react-scroll";
@@ -56,33 +56,39 @@ function FooterSection() {
           </Grid>
 
           {/* TODO: center this*/}
-          <Grid xs={12} md={4}>
-            <h4 className="foot">Organized by</h4>
-            <img className="FOSS" src={"/logoset.png"} alt="FOSS Logo" />
+          <Grid xs={12} md={2}
+          style={{
+            justifyContent:"space-around",
+            alignItems:"center",
+          }}
+          >
+            <Typography className="foot" style={{marginLeft:"10%",fontSize:'1.5rem'}}>Organized by</Typography>
+            <img className="FOSS" style={{width:"75%"}} src={"/logoset.png"} alt="FOSS Logo" />
           </Grid>
 
           {/* TODO: center this*/}
           <Grid
             item
             xs={12}
+            md={2}
             style={{
-              justifyContent: "space-between",
-              alignItems: "center",
-              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "left",
+              // display: "flex",
             }}
           >
             <div className="socials">
               <a href="https://www.facebook.com/foss.nsbm/">
-                <FaFacebook size={18} color={"#fff"} />
+                <FaFacebook size={35} color={"#fff"} />
               </a>
               <a href="https://twitter.com/fossnsbm">
-                <FaTwitter size={18} color={"#fff"} />
+                <FaTwitter size={35} color={"#fff"} />
               </a>
               <a href="https://www.instagram.com/fossnsbm/">
-                <FaInstagram size={18} color={"#fff"} />
+                <FaInstagram size={35} color={"#fff"} />
               </a>
               <a href="https://www.linkedin.com/company/fossnsbm">
-                <FaLinkedin size={18} color={"#fff"} />
+                <FaLinkedin size={35} color={"#fff"} />
               </a>
             </div>
           </Grid>
@@ -95,7 +101,7 @@ function FooterSection() {
           <Grid item xs={12} md={6} className="endbar">
             <p className="endbrtxttwo">
               &lt;/&gt; with
-              <FaHeart className="heart" size={18} color={"#fff"} /> by the FOSS
+              <FaHeart className="heart" size={22} color={"#fff"} /> by the FOSS
               Community of NSBM
             </p>
           </Grid>
