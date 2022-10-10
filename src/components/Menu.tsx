@@ -24,7 +24,7 @@ const Menubar: React.FC = () => {
         </Typography>
       </RSLink>
 
-      <Link style={{ textDecoration: "none" }} to="/events">
+      <Link style={{ textDecoration: "none" }} to="/LeaderBoard">
         <Typography fontSize={16} fontWeight="600">
           LeaderBoard
         </Typography>
