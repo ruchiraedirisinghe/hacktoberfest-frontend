@@ -1,27 +1,38 @@
-import * as React from "react";
 import { Grid } from "@mui/material";
-import FOSS from "../../public/logoset.png";
 import "./FooterSection.scss";
 import { Link } from "react-router-dom";
 import { Link as RSLink } from "react-scroll";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaHeart } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaHeart,
+} from "react-icons/fa";
 
 function FooterSection() {
   return (
     <div className="Footer">
       <div className="Container">
-        <Grid container direction="row" style={{ marginTop: "15%" }} >
+        <Grid container direction="row" style={{ marginTop: "15%" }}>
           <Grid item xs={1}></Grid>
           <Grid item xs={12} md={2}>
-            
-            <img align="center" style={{width:"70%",marginTop: "15%"}} className="hacknight" src="/hacknight.png" alt="Hack To Night Logo" />       
-            </Grid>
-          <Grid item xs={12} md={3}>  
+            <img
+              style={{ width: "70%", marginTop: "15%" }}
+              className="hacknight"
+              src="/hacknight.png"
+              alt="Hack To Night Logo"
+            />
+          </Grid>
+          <Grid item xs={12} md={3}>
             <h2 className="footercont">
-            HACKTO-NIGHT IS AN OVERNIGHT HACKATHON ORGANIZED BY THE FOSS COMMUNITY OF NSBM TO BE HELD ON THE 14TH AND 15TH OF OCTOBER 2022. THIS HACKATHON IS ONLY OPEN FOR NSBM UNDERGRADUATES, AND WE EXPECT THE PARTICIPATION OF AROUND 100 COMPETITORS.
+              HACKTO-NIGHT IS AN OVERNIGHT HACKATHON ORGANIZED BY THE FOSS
+              COMMUNITY OF NSBM TO BE HELD ON THE 14TH AND 15TH OF OCTOBER 2022.
+              THIS HACKATHON IS ONLY OPEN FOR NSBM UNDERGRADUATES, AND WE EXPECT
+              THE PARTICIPATION OF AROUND 100 COMPETITORS.
             </h2>
           </Grid>
-          <Grid item xs={12} md={2} align="center" style={{ marginTop: "0.5%" }} >
+          <Grid xs={12} md={2} style={{ marginTop: "0.5%" }}>
             <div className="footerNav">
               <span>
                 <Link to="/">HOME</Link>
@@ -36,11 +47,6 @@ function FooterSection() {
                   LEADER BOARD
                 </RSLink>
               </span>
-              {/* <span>
-                <RSLink activeClass="active" spy smooth to="JudgeSection">
-                  JUDGES
-                </RSLink>
-              </span> */}
               <span>
                 <RSLink activeClass="active" spy smooth to="SponsorSection">
                   SPONSORS
@@ -49,15 +55,23 @@ function FooterSection() {
             </div>
           </Grid>
 
-          <Grid item xs={12} md={4} align="center">
-            <h4 className="foot" align="center">
-              Organized by
-            </h4>
-            <img align="center" className="FOSS" src={FOSS} alt="FOSS Logo" />
-           
+          {/* TODO: center this*/}
+          <Grid xs={12} md={4}>
+            <h4 className="foot">Organized by</h4>
+            <img className="FOSS" src={"/logoset.png"} alt="FOSS Logo" />
           </Grid>
-          <Grid item xs={12} align="center" style={{justifyContent:"space-between"}}>
-          <div className="socials">
+
+          {/* TODO: center this*/}
+          <Grid
+            item
+            xs={12}
+            style={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
+            <div className="socials">
               <a href="https://www.facebook.com/foss.nsbm/">
                 <FaFacebook size={18} color={"#fff"} />
               </a>
@@ -79,8 +93,10 @@ function FooterSection() {
             <p className="endbrtxt">© 2022 FOSS Community of NSBM</p>
           </Grid>
           <Grid item xs={12} md={6} className="endbar">
-            <p align="right" className="endbrtxttwo">
-              &lt;/&gt; with <FaHeart class="heart" size={18} color={"#fff"} /> by the FOSS Community of NSBM
+            <p className="endbrtxttwo">
+              &lt;/&gt; with
+              <FaHeart className="heart" size={18} color={"#fff"} /> by the FOSS
+              Community of NSBM
             </p>
           </Grid>
         </Grid>
@@ -89,3 +105,4 @@ function FooterSection() {
   );
 }
 export default FooterSection;
+
