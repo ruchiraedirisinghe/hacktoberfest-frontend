@@ -1,6 +1,5 @@
 import { useTheme } from "@emotion/react";
 import { Container, Box,TextField, Button, Grid, Typography, Stack, Paper } from "@mui/material";
-import { Link } from "react-router-dom";
 import { TheLogo } from "../components/Logo";
 import { HeartLogo } from "../components/Logo/Heart";
 import { Divider } from "../components/Divider";
@@ -23,6 +22,12 @@ const LeaderBoard = () =>{
         This Competition not started yet. Please wait
         </Typography>
         </Container>
+
+        <Container sx={{ mt: 10, mb: 50 }}>
+        <div className="large_divider" />
+      </Container>
+
+
         </>
         ):(
         <Container sx={{ mt: 5 }} maxWidth="lg">
@@ -229,4 +234,3 @@ const LeaderBoard = () =>{
 }
 
 export default LeaderBoard;
-

@@ -180,7 +180,7 @@ const HomePage = () => {
           </Button>
         </div>
       </Container>
-      <Container sx={{ mt: 10, mb: 100 }}>
+      <Container sx={{ mt: 10, mb: 35 }}>
         <div className="large_divider" />
       </Container>
     </>
