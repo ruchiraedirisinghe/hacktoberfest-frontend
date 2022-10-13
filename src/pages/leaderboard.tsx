@@ -5,6 +5,8 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import useLeaderboard from "../hooks/useLeaderboard";
+
 const teams = [
   {
     name: "Team One",
@@ -17,6 +19,8 @@ const teams = [
 ];
 
 const LeaderBoard = () => {
+  const { isLoading, error, data } = useLeaderboard();
+
   return (
     <>
       {AppConfig.leaderboard_closed ? (
@@ -39,36 +43,53 @@ const LeaderBoard = () => {
             Leaderboard
           </Typography>
 
-          {teams.map((team) => {
-            return (
-              <>
-                <Paper sx={{ mb: 3 }}>
-                  <Accordion>
-                    <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header"
-                    >
-                      <Typography variant={"h5"} className="headersmallShadow">
-                        {team.name}
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      {team.members.map((member) => {
-                        return (
-                          <>
-                            <Typography className="headersmallShadow">
-                              {member}
-                            </Typography>
-                          </>
-                        );
-                      })}
-                    </AccordionDetails>
-                  </Accordion>
-                </Paper>
-              </>
-            );
-          })}
+          {isLoading ? (
+            <>
+              <Paper sx={{ mb: 3 }}>Loading...</Paper>
+            </>
+          ) : (
+            <>
+              {data.map((item: any) => {
+                return (
+                  <>
+                    <Paper sx={{ mb: 3 }}>
+                      <Accordion>
+                        <AccordionSummary
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
+                        >
+                          <Typography
+                            variant={"h5"}
+                            className="headersmallShadow"
+                          >
+                            {item?.team?.teamName}
+                          </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          {item?.team ? (
+                            <>
+                              {item?.team?.members.map((member: any) => {
+                                return (
+                                  <>
+                                    <Typography className="headersmallShadow">
+                                      {member?.fullName}
+                                    </Typography>
+                                  </>
+                                );
+                              })}
+                            </>
+                          ) : (
+                            <>no members found </>
+                          )}
+                        </AccordionDetails>
+                      </Accordion>
+                    </Paper>
+                  </>
+                );
+              })}
+            </>
+          )}
         </Container>
       )}
     </>
