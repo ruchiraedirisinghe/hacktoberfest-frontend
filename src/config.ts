@@ -1,5 +1,5 @@
 export const AppConfig = {
-  api_url: "http://localhost:4000",
+  api_url: "https://api.hacktonight.fossnsbm.org",
   register_closed: true,
   leaderboard_closed: false,
 };
