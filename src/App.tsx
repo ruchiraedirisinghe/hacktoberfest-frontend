@@ -11,9 +11,8 @@ function App() {
     <div className="App">
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
-        <ReactQueryDevtools initialIsOpen={false} />
+        <ReactQueryDevtools initialIsOpen={true} />
       </QueryClientProvider>
-
       <ToastContainer
         position="bottom-left"
         autoClose={5000}

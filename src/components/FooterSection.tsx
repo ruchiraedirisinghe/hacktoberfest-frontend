@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import "./FooterSection.scss";
+import "../styles/FooterSection.scss";
 import { Link } from "react-router-dom";
 import { Link as RSLink } from "react-scroll";
 import {
@@ -55,15 +55,26 @@ function FooterSection() {
             </div>
           </Grid>
 
-          {/* TODO: center this*/}
-          <Grid xs={12} md={2}
-          style={{
-            justifyContent:"space-around",
-            alignItems:"center",
-          }}
+          <Grid
+            xs={12}
+            md={2}
+            style={{
+              justifyContent: "space-around",
+              alignItems: "center",
+            }}
           >
-            <Typography className="foot" style={{marginLeft:"10%",fontSize:'1.5rem'}}>Organized by</Typography>
-            <img className="FOSS" style={{width:"75%"}} src={"/logoset.png"} alt="FOSS Logo" />
+            <Typography
+              className="foot"
+              style={{ marginLeft: "10%", fontSize: "1.5rem" }}
+            >
+              Organized by
+            </Typography>
+            <img
+              className="FOSS"
+              style={{ width: "75%" }}
+              src={"/logoset.png"}
+              alt="FOSS Logo"
+            />
           </Grid>
 
           {/* TODO: center this*/}

@@ -5,6 +5,7 @@ import { TheLogo } from "../components/Logo";
 import { HeartLogo } from "../components/Logo/Heart";
 import { Divider } from "../components/Divider";
 import { AppConfig } from "../config";
+
 const HomePage = () => {
   return (
     <>
@@ -35,7 +36,8 @@ const HomePage = () => {
 
       <Container sx={{ mt: 5 }} maxWidth="lg">
         <Divider />
-        <Typography variant={"h2"} className="headerShadow">
+
+        <Typography variant={"h2"} className="headerShadow" id="preparetohack">
           PREPARE TO HACK
         </Typography>
 
